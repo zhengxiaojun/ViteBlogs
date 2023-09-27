@@ -13,7 +13,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm i vitepress vue gitalk md5 -g
+      - run: npm i vitepress vue -g
+      - run: npm i gitalk -g
+      - run: npm i md5 -g
 
       - name: Build
         run: npm run docs:build
